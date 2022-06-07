@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - print an alphabet (except for letters e and q)using putchar
+ * main - print all single digit numbers
  * Return: zero if successful
  */
 int main(void)
