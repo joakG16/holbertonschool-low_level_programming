@@ -7,19 +7,13 @@
 int main(void)
 {
 	int num1 = 48;
-	int num2 = 48;
 
-	while (num1 <= 57)
+	while(num1 <= 57)
 	{
-		putchar(num1);
-		while (num2 <= 57)
-		{
-			putchar(num2);
-			num2++;
-		}
-		num1++;
-		putchar(',');
 		putchar(' ');
+		putchar(num1);
+		putchar(',');
+		num1++;
 	}
 
 	return (0);
