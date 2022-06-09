@@ -10,9 +10,9 @@ int main(void)
 {
     int r;
 
-    r = _abs(-1);
+    r = _abs(0x0F02);
     printf("%d\n", r);
-    r = _abs(0);
+    r = _abs(2147483647);
     printf("%d\n", r);
     r = _abs(1);
     printf("%d\n", r);
