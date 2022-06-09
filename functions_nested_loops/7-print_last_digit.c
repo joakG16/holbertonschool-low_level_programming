@@ -2,18 +2,17 @@
 
 /**
  *print_last_digit - a function that prints the last digit of a number.
- *
+ *@x: number to do modulo
+ *Return: last digit
  */
 int print_last_digit(int x)
-{	
-	int lastdig = 0;
-
+{
+	x = x % 10;
 	if (x < 0)
 	{
 		x = x * -1;
 	}
-	lastdig = x % 10;
-	_putchar(lastdig + '0');
+	_putchar('0' + x);
 
-	return (lastdig);
+	return (x);
 }
