@@ -5,6 +5,15 @@
  *
  */
 int print_last_digit(int x)
-{
-	return (x % 10);
+{	
+	int lastdig = 0;
+
+	if (x < 0)
+	{
+		x = x * -1;
+	}
+	lastdig = x % 10;
+	_putchar(lastdig + '0');
+
+	return (lastdig);
 }
