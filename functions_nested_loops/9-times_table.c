@@ -31,7 +31,9 @@ void times_table(void)
 				_putchar((res % 10) + '0');
 			}
 			if (fil > 8)
+			{
 				break;
+			}
 			else
 				_putchar(',');
 		}
