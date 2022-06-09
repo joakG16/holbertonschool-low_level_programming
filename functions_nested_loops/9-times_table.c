@@ -15,9 +15,14 @@ void times_table(void)
 			res = fil * col;
 			if (res < 10)
 			{
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(res + '0');
+				if (fil == 0)
+					_putchar(res + '0');
+				else
+				{
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(res + '0');
+				}
 			}
 			if (res >= 10)
 			{
