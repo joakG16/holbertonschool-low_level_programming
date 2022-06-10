@@ -9,7 +9,7 @@ void print_numbers(void)
 
 	for (dig = 48; dig <= 57; dig++)
 	{
-		putchar(dig);
+		_putchar(dig);
 	}
-	putchar('\n');
+	_putchar('\n');
 }
