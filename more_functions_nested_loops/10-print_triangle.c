@@ -2,18 +2,27 @@
 
 /**
  *print_triangle - print a triangle
- *@size: number of diagonals
+ *@size: triangle size
  */
 void print_triangle(int size)
 {
-	int count;
-	int space;
+	int i, spc, hash;
 
-	for (count = 1; count <= size; count++)
+	if (size > 0)
 	{
-		for (space = size; space <= count; size--)
+		for (i = 1; i <= size; i++)
 		{
-			_putchar('#');
+			for(spc = size - i; spc > 0; spc--)
+			{
+				_putchar(' ');
+			}	
+			for(hash = 1; hash <= i; hash++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
 		}
 	}
+	else
+		_putchar('\n');
 }
