@@ -18,8 +18,8 @@ return (count);
 }
 
 /**
- *
- *
+ *puts2 - print a string (even number of char)
+ *@str: string passed
  */
 void puts2(char *str)
 {
