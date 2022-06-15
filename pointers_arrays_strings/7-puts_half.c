@@ -32,7 +32,7 @@ void puts_half(char *str)
 	if (c % 2 == 0)
 		cmid = c / 2;
 	if (c % 2 != 0)
-		cmid = (c - 1) / 2;
+		cmid = (c + 1) / 2;
 
 	for (i = cmid; i < c; i++)
 	{
