@@ -1,22 +1,29 @@
 #include "main.h"
 #include <stddef.h>
-
+#include <stdio.h>
 /**
  *
  *
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i;
+	int index;
+	int len = 0;
 
-	while (*needle)
+	while (needle[len] != '\0')
+		len++;
+
+	while (*haystack)
 	{
-		for (i = 0; haystack[i] != '\0'; i++)
+		for (index = 0; needle[index]; index++)
 		{
-			if(*needle == haystack[i])
-				return(&haystack[i]);
+			if (haystack[index] != needle[index])
+				break;
 		}
-		needle++;
+		if (index != len)
+			haystack++;
+		else
+			return (haystack);
 	}
-	return(NULL);
+	return ('\0');
 }
