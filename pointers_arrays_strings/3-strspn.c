@@ -11,12 +11,12 @@
  */
 char *_strchr(char *s, char c)
 {
-        while (*s != '\0' && *s != c)
-        {
-                s++;
-        }
-        if (*s == c)
-                return (s);
+	while (*s != '\0' && *s != c)
+	{
+		s++;
+	}
+	if (*s == c)
+		return (s);
 
 return (NULL);
 }
@@ -33,12 +33,12 @@ unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int len = 0;
 
-        if((s == NULL) || (accept == NULL))
-		return len;
-    
-	while(*s && _strchr(accept, *s++))
+	if ((s == NULL) || (accept == NULL))
+		return (len);
+
+	while (*s && _strchr(accept, *s++))
 	{
 		len++;
 	}
-	return len;
+	return (len);
 }
