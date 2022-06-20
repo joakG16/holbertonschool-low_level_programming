@@ -27,5 +27,8 @@ int CheckPrime(int n,int i)
  */
 int is_prime_number(int n)
 {
-	return (CheckPrime(n, n / 2));
+	if (n == 1)
+		return (0);
+	else
+		return (CheckPrime(n, n / 2));
 }
