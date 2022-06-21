@@ -24,17 +24,13 @@ int main(int argc, char **argv)
 		{
 			for (j = 0; j < (int)strlen(argv[i]); j++)
 			{
-				if (isdigit(argv[i][j]))
-				{
-					sum = sum + atoi(argv[i]);
-					break;
-				}
-				else
+				if (!isdigit(argv[i][j]))
 				{
 					printf("Error\n");
 					return(1);
 				}
 			}
+			sum = sum + atoi(argv[i]);
 		}
 		printf("%d\n", sum);
 	}
