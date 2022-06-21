@@ -17,7 +17,7 @@ int main(int argc, char __attribute__((unused)) **argv)
 		for (count = 0; count < argc; count++)
 		{
 		}
-		printf("%d\n", count);
+		printf("%d\n", count - 1);
 	}
 	
 	return (0);
