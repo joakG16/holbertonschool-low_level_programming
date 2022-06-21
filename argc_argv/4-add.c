@@ -5,9 +5,10 @@
 #include <stdlib.h>
 
 /**
- *
- *
- *
+ *main - a program that adds positive numbers.
+ *@argc: argument count
+ *@argv: array of pointers to strings
+ *Return: 0 if success, 1 if error
  */
 int main(int argc, char **argv)
 {
@@ -27,7 +28,7 @@ int main(int argc, char **argv)
 				if (!isdigit(argv[i][j]))
 				{
 					printf("Error\n");
-					return(1);
+					return (1);
 				}
 			}
 			sum = sum + atoi(argv[i]);
@@ -35,5 +36,5 @@ int main(int argc, char **argv)
 		printf("%d\n", sum);
 	}
 
-return(0);
+return (0);
 }
