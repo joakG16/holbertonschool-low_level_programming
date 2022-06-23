@@ -19,7 +19,6 @@ char *_strdup(char *str)
 
 	if (s == NULL)
 		return (NULL);
-
 	else
 	{
 		for (i = 0; i < (int)strlen(str); i++)
