@@ -41,13 +41,13 @@ int main(void)
 {
 	int *a;
 
-	a = array_range(0, 98);
+	a = array_range(-512, 512);
 	if (a == NULL)
 	{
 		printf("Failed\n");
 		return (1);
 	}
-	simple_print_buffer(a, 98);
+	simple_print_buffer(a, 1024);
 	free(a);
 	return (0);
 }
