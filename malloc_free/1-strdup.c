@@ -4,8 +4,9 @@
 #include <string.h>
 
 /**
- *
- *
+ *_strdup - main
+ *@str: string
+ *Return: pointer to allocated memory
  */
 char *_strdup(char *str)
 {
@@ -13,12 +14,16 @@ char *_strdup(char *str)
 	int i = 0;
 
 	if (str == NULL)
+	{
 		return (NULL);
+	}
 
 	s = malloc(sizeof(char) * strlen(str) + 1);
 
 	if (s == NULL)
+	{
 		return (NULL);
+	}
 	else
 	{
 		for (i = 0; i < (int)strlen(str); i++)
@@ -27,5 +32,5 @@ char *_strdup(char *str)
 		}
 		s[i] = '\0';
 	}
-	return(s);
+	return (s);
 }

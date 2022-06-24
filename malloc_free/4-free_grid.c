@@ -3,9 +3,9 @@
 #include <stddef.h>
 
 /**
- *
- *
- *
+ *free_grid - main
+ *@grid: grid
+ *@height: height
  */
 void free_grid(int **grid, int height)
 {

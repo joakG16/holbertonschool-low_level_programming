@@ -4,9 +4,10 @@
 #include <string.h>
 
 /**
- *
- *
- *
+ *str_concat - main
+ *@s1: s1
+ *@s2: s2
+ *Return: pointer to allocated memory
  */
 char *str_concat(char *s1, char *s2)
 {
@@ -22,7 +23,9 @@ char *str_concat(char *s1, char *s2)
 	s = malloc(sizeof(char) * strlen(s1) + strlen(s2) + 1);
 
 	if (s == NULL)
+	{
 		return (NULL);
+	}
 
 	else
 	{
