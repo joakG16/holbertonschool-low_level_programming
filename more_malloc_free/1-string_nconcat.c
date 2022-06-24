@@ -11,14 +11,15 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
-	unsigned int lenS1 = strlen(s1);
-	unsigned int lenS2 = strlen(s2);
-	unsigned int i, j;
+	unsigned int lenS1, lenS2, i, j;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+
+	lenS1 = strlen(s1);
+	lenS2 = strlen(s2);
 
 	p = malloc (sizeof(char) * lenS1 + lenS2 + 1);
 
