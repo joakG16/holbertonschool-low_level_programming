@@ -3,10 +3,13 @@
 #include <stddef.h>
 #include <string.h>
 
-/*
- *
- *
- *
+/**
+ *string_nconcat - concatenate two strings using also malloc
+ *@s1:string
+ *@s2:string
+ *@n:size in bytes of s2
+ *Return: a pointer to the new allocated memory along
+ *with the concatenated strings
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {

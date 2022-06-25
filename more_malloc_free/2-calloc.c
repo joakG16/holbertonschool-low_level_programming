@@ -3,9 +3,11 @@
 #include <stdlib.h>
 
 /**
- *
- *
- *
+ *_calloc - a function that allocates memory(set to 0) for an
+ *array, using malloc.
+ *@nmemb: elements of the array
+ *@size: size of each element
+ *Return: returns a pointer to the allocated memory.
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
