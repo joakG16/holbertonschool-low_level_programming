@@ -3,8 +3,13 @@
 #include <stdio.h>
 
 /**
+ *int_index - a function that searches for an integer.
  *
- *
+ *@array: pointer to array
+ *@size: array size
+ *@cmp: pointer to function that performs the comparation
+ *Return: the index of the first element for which the cmp function does not
+ *return 0, -1 otherwise
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
@@ -18,8 +23,8 @@ int int_index(int *array, int size, int (*cmp)(int))
 	{
 		if (cmp(array[i]) != 0)
 		{
-			return(i);
+			return (i);
 		}
 	}
-	return(-1);
+	return (-1);
 }
