@@ -5,9 +5,12 @@
 #include <string.h>
 
 /**
+ *new_dog - a function that creates a new dog(dynamically)
  *
- *
- *
+ *@name: dog name
+ *@age: dog age
+ *@owner: dog owner
+ *Return: pointer of type dog_t that points to the allocated memory
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -15,14 +18,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	dogg = malloc(sizeof(dog_t));
 
-	if(dogg == NULL)
+	if (dogg == NULL)
 	{
 		return (NULL);
 	}
 	else
 	{
 		dogg->name = malloc(sizeof(dogg->name) * (strlen(name) + 1));
-			if(dogg->name == NULL)
+			if (dogg->name == NULL)
 			{
 				free(dogg);
 				return (NULL);
@@ -33,7 +36,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		dogg->age = age;
 
 		dogg->owner = malloc(sizeof(dogg->owner) * (strlen(owner) + 1));
-			if(dogg->owner == NULL)
+			if (dogg->owner == NULL)
 			{
 				free(dogg->name);
 				free(dogg);
@@ -42,5 +45,5 @@ dog_t *new_dog(char *name, float age, char *owner)
 			else
 				strcpy(dogg->owner, owner);
 	}
-	return(dogg);
+	return (dogg);
 }
