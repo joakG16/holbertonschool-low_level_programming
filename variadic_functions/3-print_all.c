@@ -21,16 +21,10 @@ void print_all(const char * const format, ...)
 	int i, j;
 	char *separator = "";
 
-	if (format == NULL)
-	{
-		printf("\n");
-		return;
-	}
-
 	va_start(args, format);
 
 	i = 0;
-	while (i < (int)strlen(format))
+	while (format != NULL && i < (int)strlen(format))
 	{
 		j = 0;
 		while (fmt[j].type != '\0')
