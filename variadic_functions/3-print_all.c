@@ -19,13 +19,18 @@ void print_all(const char * const format, ...)
 	};
 	va_list args;
 	int i, j;
-	int num_args = strlen(format);
 	char *separator = "";
+
+	if (format == NULL)
+	{
+		printf("\n");
+		return;
+	}
 
 	va_start(args, format);
 
 	i = 0;
-	while (i < num_args)
+	while (i < (int)strlen(format))
 	{
 		j = 0;
 		while (fmt[j].type != '\0')
