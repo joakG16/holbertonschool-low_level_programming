@@ -1,0 +1,11 @@
+CC = gcc
+SRC = main.c school.c
+#below, the OBJ is using the exanded value of SRC,
+#to make (name only) .o files, from .c files
+OBJ = $(SRC:.c=.o)
+NAME = school
+
+#requirements: object code, depending if the object code is available,
+#it executes the objective below, if not, the makefile alone makes the object code to use after
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
