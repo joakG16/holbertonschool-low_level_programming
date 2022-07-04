@@ -1,0 +1,5 @@
+all: school
+
+# this rule compile the school program
+school: main.c school.c
+	gcc main.c school.c -o school
