@@ -4,7 +4,10 @@
 #the dependencies/objetives that need to go in the school rule
 CC = gcc
 SRC = main.c school.c
-all: school
+all: school holberton
 
 school: $(SRC)
 	$(CC) $(SRC) -o school
+
+holberton: $(SRC)
+	 $(CC) $(SRC) -o holberton
