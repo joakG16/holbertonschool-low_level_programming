@@ -36,8 +36,10 @@ void print_all(const char * const format, ...)
 				fmt[j].print_type(args);
 				separator = ", ";
 			}
+
 			j++;
 		}
+
 		i++;
 	}
 	printf("\n");
