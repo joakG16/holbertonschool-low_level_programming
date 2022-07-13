@@ -10,7 +10,7 @@ void free_list(list_t *head)
 
 	while (head != NULL)
 	{
-		/* 
+		/*
 		 * "save" the node it is currently standing
 		 * so when I free it, next doesn't get lost also
 		 */
