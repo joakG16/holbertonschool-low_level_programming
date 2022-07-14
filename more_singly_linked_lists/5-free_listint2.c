@@ -11,7 +11,7 @@ void free_listint2(listint_t **head)
 	 * this are pointers to nodes, they only store their memory adresses
 	 */
 
-	if (*head == NULL)
+	if (head == NULL)
 	{
 		return;
 	}
