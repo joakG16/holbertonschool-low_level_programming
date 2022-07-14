@@ -5,7 +5,7 @@
  *@h: pointer to struct of type listint_t (pointing to the first node)
  *Return: node counter
  */
-size_t print_listint(const listint_t *h);
+size_t print_listint(const listint_t *h)
 {
 	int count = 0;
 
