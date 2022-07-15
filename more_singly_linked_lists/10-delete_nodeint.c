@@ -30,7 +30,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	size = listint_len(*head);
 
-	if (*head == NULL)
+	if (index > size || *head == NULL)
 	{
 		return(-1);
 	}
