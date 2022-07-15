@@ -18,6 +18,8 @@ int sum_listint(listint_t *head)
 	current = head;
 	while (current != NULL)
 	{
+		/* accessing the value of the current node */
+		/* through the auxiliar dereferenced pointer-to-node */
 		sum += current->n;
 		current = current->next;
 	}
