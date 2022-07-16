@@ -19,9 +19,11 @@ size_t listint_len(const listint_t *h)
 }
 
 /**
- *
- *
- *
+ *insert_nodeint_at_index - insert node
+ *@head: double pointer
+ *@idx: index
+ *@n: data
+ *Return: pointer of type listint_t
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
