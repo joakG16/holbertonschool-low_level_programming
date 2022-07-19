@@ -9,18 +9,22 @@ unsigned int binary_to_uint(const char *b)
 	char *binary;
 	unsigned int dec_val = 0;
 	int i = 0;
-	int base = 1;
-	int len = strlen(b);
+	int len, base = 1;
 
+	if (b == NULL)
+	{
+		return (0);
+	}
+	len = strlen(b);
 	binary = malloc(sizeof(char *) * len);
 	if (binary == NULL)
 	{
 		return (0);
 	}
 	binary = strcpy(binary, b);
-	for(i = len - 1; i >= 0; i--)
+	for (i = len - 1; i >= 0; i--)
 	{
-		if(binary[i] != '0' && binary[i] != '1')
+		if (binary[i] != '0' && binary[i] != '1')
 		{
 			return (0);
 		}
@@ -30,5 +34,5 @@ unsigned int binary_to_uint(const char *b)
 		}
 		base = base * 2;
 	}
-	return(dec_val);
+	return (dec_val);
 }
