@@ -48,9 +48,8 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	while (1)
+	while ((in = read(src, buf, BUF_SIZE)) != 0) /* doesn't end file */
 	{
-		in = read(src, buf, BUF_SIZE);
 		if (in < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
@@ -63,7 +62,9 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
+
 	_close(src);
 	_close(dst);
+
 	return (0);
 }
