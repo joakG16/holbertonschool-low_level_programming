@@ -15,12 +15,19 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	{
 		return (NULL);
 	}
+
 	newnode->n = n;
-	newnode->prev = NULL;
-	newnode->next = *head; /*next node (which was the
-				 first on the list) is going to be the
-				 after the new allocated node */
-	*head = newnode;
+
+	if (*head != NULL)
+		(*head)->prev = newnode;
+	else
+		newnode->prev = NULL;
+	/*
+	 *next node (which was the first on the list) is going
+	 *to be the after the new allocated node 
+	 */
+	 newnode->next = *head;
+	 *head = newnode;
 
 	return(*head);
 }
