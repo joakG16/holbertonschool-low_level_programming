@@ -1,7 +1,8 @@
 #include "lists.h"
 
 /**
- *
+ *free_dlistint - free DLL
+ *@head: head
  *
  */
 void free_dlistint(dlistint_t *head)

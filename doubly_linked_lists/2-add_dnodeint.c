@@ -1,9 +1,11 @@
 #include "lists.h"
 
 /**
+ *add_dnodeint - add node at start
+ *@head: refernce to head
+ *@n: data
  *
- *
- *
+ *Return: pointer
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
@@ -24,10 +26,10 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 		newnode->prev = NULL;
 	/*
 	 *next node (which was the first on the list) is going
-	 *to be the after the new allocated node 
+	 *to be the after the new allocated node
 	 */
 	 newnode->next = *head;
 	 *head = newnode;
 
-	return(*head);
+	return (*head);
 }
