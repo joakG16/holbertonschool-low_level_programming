@@ -1,8 +1,8 @@
 #include "hash_tables.h"
 
 /**
- * @brief 
- * 
+ * hash_table_delete - free a Hash table function (and nodes inside)
+ * @ht: hash table provided
  */
 void hash_table_delete(hash_table_t *ht)
 {
@@ -12,7 +12,7 @@ void hash_table_delete(hash_table_t *ht)
 	if (ht == NULL)
 		return;
 
-	for(i = 0; i < ht->size; i++)
+	for (i = 0; i < ht->size; i++)
 	{
 		item = ht->array[i];
 
