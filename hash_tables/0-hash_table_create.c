@@ -1,9 +1,9 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_create - create dynamically a hash table
- * @size: hash table size
- * return: a newly created table
+ *hash_table_create - create dynamically a hash table
+ *@size: hash table size
+ *Return: a newly created table
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
@@ -25,6 +25,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 		free(newtable);
 		return (NULL);
 	}
-	
+
 	return (newtable);
 }
