@@ -15,7 +15,6 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		return (NULL);
 
 	idx = key_index((unsigned char *)key, ht->size);
-
 	arr_item = ht->array[idx];
 
 	while (arr_item != NULL)
