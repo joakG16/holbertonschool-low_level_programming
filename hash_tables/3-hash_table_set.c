@@ -4,7 +4,7 @@
  * hash_table_set - a function that adds an element to the hash table.
  * @ht: hash table you want to add or update the key/value to
  * @key: is the key. key can not be an empty string
- * @value: the value associated with the key. MUST be duplicated. 
+ * @value: the value associated with the key. MUST be duplicated.
  * Value CAN be an empty string
  * Return: 1 if key was found and value was set, 0 otherwise
  */
