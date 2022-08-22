@@ -20,6 +20,7 @@ void hash_table_delete(hash_table_t *ht)
 		{
 			free(item->key);
 			free(item->value);
+			free(item);
 			item = item->next; /* in case of collision (multiple Lin.Lis) */
 		}
 		free(item);
